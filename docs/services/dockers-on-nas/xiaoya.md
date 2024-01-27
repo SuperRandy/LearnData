@@ -10,7 +10,7 @@ order: 2
 
 ## Emby + 小雅
 
-若你正在使用 Emby，可以浏览[《如何使用 EMBY 展示小雅内容》教程](https://xiaoyaliu.notion.site/d353c9ceb15444d7b8e21ce6097ed739?v=145044ac8252470a9feef094ff1db520)，以增强播放体验的稳定性。
+x version: "3.8"​services:  uptime-kuma:    image: louislam/uptime-kuma:1    container_name: uptime-kuma    volumes:      - /volume1/docker/uptime-kuma/data:/app/data      # 用于 Docker 容器监控      - /var/run/docker.sock:/var/run/docker.sock    ports:      - "3001:3001" # <Host Port>:<Container Port>    restart: alwaysyml
 
 此方法可以将小雅的内容与 Emby 整合，把小雅当作资源库，Emby 则作为展示平台。它们通过 strm 文件相连，并通过同步软件保持内容同步。但请留意，元数据占用的空间可达 160G，请确保有充足的储存空间。下载元数据可能会影响你现有的 Emby 数据，最好在操作前进行配置备份。
 
